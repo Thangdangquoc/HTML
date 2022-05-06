@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sở thích</title>
+    <style>
+        /*table {*/
+        /*    width: 400px;*/
+        /*    height: 200px;*/
+        /*}*/
+        /*th{*/
+        /*    background-color: yellow*/
+        /*}*/
+        /*    td{width: 100px;*/
+        /*        height: 50px;*/
+        /*    }*/
+    </style>
+</head>
+<body style="background-color:powderblue;">
+<form>
+    <table style="background-color: white">
+        <tr>
+            <th colspan="4"> Sở thích của bạn</th>
+        </tr>
+        <tr>
+            <td style="color:blue;"> Họ và tên:</td>
+            <td colspan="3">
+                <input type="text" name="name">
+            </td>
+        </tr>
+        <td style="color:blue;">Email:</td>
+        <td colspan="3">
+            <input type="text" name="email">
+        </td>
+<!--        <td></td>-->
+<!--        <td></td>-->
+        <tr rowspan="3">
+            <td rowspan="3" style="color:blue;">Sở thích:</td>
+            <td colspan="3">
+                <input type="checkbox" id="hob1" name="hobbit" value="Sport"><label for="hob1">Thể thao</label>
+                <input type="checkbox" id="hob2" name="hobbit" value="Music"><label for="hob2"> Âm nhạc</label>
+                <input type="checkbox" id="hob3" name="hobbit" value="Reading"><label for="hob3">Đọc sách</label>
+                <br>
+                <input type="checkbox" id="hob4" name="hobbit" value="Web"><label for="hob4">Lướt web</label>
+                <input type="checkbox" id="hob5" name="hobbit" value="Game"><label for="hob5">Chơi game</label>
+                <input type="checkbox" id="hob6" name="hobbit" value="Film"><label for="hob6">Điện ảnh</label>
+                <br>
+                <input type="checkbox" id="hob7" name="hobbit" value="Travel"><label for="hob7">Du lịch</label>
+
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <input type="button" name="submit" value="Gửi thông tin">
+            </td>
+            <td>
+                <input type="button" name="btsubmit" value="Nhập lại">
+            </td>
+            <td></td>
+        </tr>
+
+
+
+    </table>
+</form>
+</body>
+</html>
