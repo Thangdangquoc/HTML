@@ -1,0 +1,18 @@
+table{
+    width: 100%;
+    border-collapse:collapse ;
+}
+td,th {
+    padding: 20px;
+    border: 1px solid black;
+}
+th{
+    font-family: 'Arial Narrow', Calibri, serif;
+    font-size:16px ;
+    font-weight: 400;
+    color: aqua;
+    text-align: center;
+    padding: 20px;
+    background-color: brown;
+    border-color: blueviolet;
+}
