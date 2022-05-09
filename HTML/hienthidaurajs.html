@@ -3,16 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="../JAVASCRIPT/nhapmonjs.js"></script>
 </head>
 <body>
-<!--<h1> Hiển thị đầu ra</h1>-->
-<!--<p id="demo312"> BYe </p>-->
-<!--<button onclick="showMessager();">Click Me!</button>-->
+<h1> Hiển thị đầu ra</h1>
+<input type="text" id=" demoo" >
+<div id="messageDiv"></div>
+<button onclick="showMessager();">Click Me!</button>
 <button  id="demo31" onclick="demo1();">Getbyid</button>
-<!--<button onclick="demo2();">Getwrite</button>-->
-<!--<button onclick="demo3();">Consolog</button>-->
+<button onclick="demo2();">Getwrite</button>
+<button onclick="demo3();">Consolog</button>
+<script>
+    function showMessager(){
+        alert(" hello")
+    }
+    function demo1(){
+        document.getElementById("messageDiv").innerHTML = "hi"
+    }
+    function demo2(){
+        document.write( "BYe bye")
+    }
+    function  demo3(){
+        console.log( "Goodbye!")
+    }
+</script>
 
 </body>
-<script src="../JAVASCRIPT/nhapmonjs.js"></script>
 </html>
