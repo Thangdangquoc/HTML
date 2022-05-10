@@ -26,36 +26,54 @@
 <!--    }-->
 <!--</script>-->
 <!--bài 4a,b-->
-<input type="number" id="numa">
-<input type="number" id="numb">
-<button onmouseout="Add()">Kết quả</button>
-<p>Diện tích:
-<div id="result"></div>
-</p>
-<p>Chu vi:
-<div id="chuVi"></div>
-</p>
-<p> Tính mũ a^b<div id="mu"></div></p>
-<script>
-    function Add() {
-        let number1 = document.getElementById("numa").value
-        let number2 = document.getElementById("numb").value
-
-        let result = number1 * number2
-        let Chuvi = number1 * 4
-        let Tinhmu = Math.pow(number1, number2)
-        document.getElementById("result").innerHTML = result;
-        document.getElementById("chuVi").innerHTML = Chuvi;
-        document.getElementById("mu").innerHTML = Tinhmu
-    }
-</script>
-<!--Bài 4e-->
 <!--<input type="number" id="numa">-->
 <!--<input type="number" id="numb">-->
-<!--<input type="number" id="numc">-->
-
+<!--<button onmouseout="Add()">Kết quả</button>-->
+<!--<p>Diện tích:-->
+<!--<div id="result"></div>-->
+<!--</p>-->
+<!--<p>Chu vi:-->
+<!--<div id="chuVi"></div>-->
+<!--</p>-->
+<!--<p> Tính mũ a^b<div id="mu"></div></p>-->
 <!--<script>-->
+<!--    function Add() {-->
+<!--        let number1 = document.getElementById("numa").value-->
+<!--        let number2 = document.getElementById("numb").value-->
 
+<!--        let result = number1 * number2-->
+<!--        let Chuvi = number1 * 4-->
+<!--        let Tinhmu = Math.pow(number1, number2)-->
+<!--        document.getElementById("result").innerHTML = result;-->
+<!--        document.getElementById("chuVi").innerHTML = Chuvi;-->
+<!--        document.getElementById("mu").innerHTML = Tinhmu-->
+<!--    }-->
+<!--</script>-->
+<!--Bài 4e-->
+<input type="number" id="numa">
+<input type="number" id="numb">
+<input type="number" id="numc">
+
+<script>
+    let a = document.getElementById("numa").value
+    let b = document.getElementById("numb").value
+    let c = document.getElementById("numc").value
+    if (a + b > c && a + c > b && b + c > a) {
+        if (a * a == b * b + c * c || b * b == a * a + c * c || c * c == b * b + a * a) {
+            alert("Tam giác vuông")
+        } else if (a == b && a == c) {
+            alert(" Tam giác đều")
+        } else if (a == b || a == c || b == c) {
+            alert(" Tam giác cân")
+        } else {
+            alert("là tam giác")
+        }
+
+    }else {
+        alert("Không phải tam giác")
+    }
+
+</script>
 
 
 </body>
