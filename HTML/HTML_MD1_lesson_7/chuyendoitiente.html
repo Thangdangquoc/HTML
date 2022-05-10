@@ -3,33 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+<!--    <script src="../../JAVASCRIPT/chuyendoitiente.js"></script>-->
 </head>
 <body>
-<form>
     <table>
         <tr>
-            <th> Amount</th>
+            <th><label for="Amount">Amount</label></th>
             <th> From Currency</th>
             <th> To Currency</th>
             <th></th>
         </tr>
         <tr>
-            <td><input type="text" id="m1" name="number"></td>
-           <td> <select id="gen1" name="gender">
+            <td><input type="text" id="Amount"></td>
+           <td> <select id="From">
                 <option value="USD">USD</option>
                 <option value="VNĐ">VNĐ</option>
             </select></td>
-            <td> <select id="gen2" name="gender">
+            <td> <select id="To">
                 <option value="USD">USD</option>
                 <option value="VNĐ">VNĐ</option>
             </select></td>
-            <td><button onclick="changemoney">Convert</button></td>
-        </tr>
-        <tr>
-
+            <td><button onclick="changemoney()">Convert</button></td>
         </tr>
     </table>
-</form>
+    <br>
+    <p id="Result "></p>
+    <script>
+        function changemoney() {
+            let amount= document.getElementById("Amount").value;
+            let fromC= document.getElementById("From").value;
+            let To= document.getElementById("To").value;
+            let Result;
+
+        if ( fromC=="VNĐ" && To =="USD" )
+        {
+            Result = "Result:"+(amount/23000)+ "$";
+        }
+
+        else if ( fromC=="USD" && To=="VNĐ")
+        {
+            Result = "Result:" + (amount*23000)+ "Đ";
+        }
+        else if ( fromC=="VNĐ")
+        {
+
+            Result = "Result" + amount + "Đ";
+        }
+        else
+            Result= "Result" + amount + "$"
+
+
+        document.getElementById("Result").innerHTML = Result;}
+    </script>
+<!--    <tr>-->
+<!--        <th><label for="Amount">Amount</label></th>-->
+<!--        <th>From Currency</th>-->
+<!--        <th>To Currency</th>-->
+<!--        <th></th>-->
+<!--    </tr>-->
+<!--    <tr>-->
+<!--        <td><input type="text" id="Amount"></td>-->
+<!--        <td>-->
+<!--            <select id="From">-->
+<!--                <option value="VND">VND</option>-->
+<!--                <option value="USD">USD</option>-->
+<!--            </select>-->
+<!--        </td>-->
+<!--        <td>-->
+<!--            <select id="To">-->
+<!--                <option value="VND">VND</option>-->
+<!--                <option  value="USD">USD</option>-->
+<!--            </select>-->
+<!--        </td>-->
+<!--        <td><button onclick="ChangeMoney()">Convert</button></td>-->
+<!--    </tr>-->
+<!--</table>-->
+
+<br>
+<p id="Result"></p>
 
 </body>
 </html>
