@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="ok">
+<button onclick="check()">Chuyển đổi</button>
+<p id="doo"></p>
+<script>
+    function check(){
+        let a = document.getElementById("ok").value
+        let b = a*3.2808 ;
+        document.getElementById("doo").innerText = "Độ dài là:" + b +"feet";
+    }
+
+</script>
+</body>
+</html>

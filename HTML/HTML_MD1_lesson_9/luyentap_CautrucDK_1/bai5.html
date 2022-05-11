@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = parseFloat(prompt("Điểm bài kiểm tra",""));
+    let b = parseFloat(prompt("Điểm thi đầu kỳ",""));
+    let c = parseFloat(prompt("Điểm thi cuối kỳ",""));
+    let avanger = (a+ b*2 +c*3 )/6
+    if (avanger>=8.0){
+        if (avanger >= 9.0){
+            alert("Học sinh xuất sắc");
+        }else alert("Học sinh giỏi");
+    }else if (avanger>=7.0){
+        alert("học sinh khá");
+    }else if (avanger>=5.0){
+        alert("Học sinh trung bình");
+    }else alert("Học sinh yếu")
+</script>
+</body>
+</html>

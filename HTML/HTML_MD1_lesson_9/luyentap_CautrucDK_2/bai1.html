@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="ok">
+<button onclick="check()">Chuyển đổi</button>
+<p id="doo"></p>
+<script>
+    function check(){
+        let a = document.getElementById("ok").value
+        let b = a*9/5 +32 ;
+        document.getElementById("doo").innerText = "Nhiệt độ chuyển đổi là:" + b +"F";
+    }
+</script>
+
+</body>
+</html>

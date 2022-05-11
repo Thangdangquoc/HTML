@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" name="doanhthuthang" id="turnover">
+<button onclick="add()">Check Money</button>
+<p>Tổng hoa hồng nhận được
+<div id="hoahong"></div>
+</p>
+<script>
+    function add() {
+        let a = document.getElementById("turnover").value
+        if (a > 5000000) {
+            document.getElementById("hoahong").innerText = "Hoa hồng nhận được là: " + a * 0.1 + "VNĐ";
+        } else if (a > 30000000) {
+            document.getElementById("hoahong").innerText = "Hoa hồng nhận được là: " + a * 0.07 + "VNĐ";
+        } else if (a > 20000000) {
+            document.getElementById("hoahong").innerText = "Hoa hồng nhận được là " + a * 0.05 + "VNĐ";
+        } else document.getElementById("hoahong").innerText = "Cố lên nhé! Bạn chưa đủ điều kiện";
+    }
+
+</script>
+</body>
+</html>

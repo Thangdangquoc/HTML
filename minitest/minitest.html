@@ -53,6 +53,7 @@
 <input type="number" id="numa">
 <input type="number" id="numb">
 <input type="number" id="numc">
+<p> Kết quả: <div id="tamgiac"></div></p>
 
 <script>
     let a = document.getElementById("numa").value
@@ -60,17 +61,22 @@
     let c = document.getElementById("numc").value
     if (a + b > c && a + c > b && b + c > a) {
         if (a * a == b * b + c * c || b * b == a * a + c * c || c * c == b * b + a * a) {
-            alert("Tam giác vuông")
+            // alert("Tam giác vuông")
+            document.getElementById("tamgiac").innerText= " tam giác vuông"
         } else if (a == b && a == c) {
-            alert(" Tam giác đều")
+            // alert(" Tam giác đều")
+            document.getElementById("tamgiac").innerText= " tam giác đều"
         } else if (a == b || a == c || b == c) {
-            alert(" Tam giác cân")
+            // alert(" Tam giác cân")
+            document.getElementById("tamgiac").innerText= " tam giác cân"
         } else {
-            alert("là tam giác")
+            // alert("là tam giác")
+            document.getElementById("tamgiac").innerText= " tam giác"
         }
 
     }else {
-        alert("Không phải tam giác")
+        // alert("Không phải tam giác")
+        document.getElementById("tamgiac").innerText= " không là tam giác"
     }
 
 </script>

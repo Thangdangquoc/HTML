@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="ok">
+<button onclick="add()"> Kiểm tra</button>
+<p> Tổng tiền cước phải trả là: <div id="money"></div></p>
+<script>
+    function add() {
+        let a = document.getElementById("ok").value
+        if (a>60){
+            document.getElementById("money").innerText = a*100 +"VNĐ";
+        }else if (a>30){
+            document.getElementById("money").innerText = a*500 +"VNĐ";
+        }else if (a>10){
+            document.getElementById("money").innerText = a*700 +"VNĐ";
+        }else document.getElementById("money").innerText = a*1000 +"VNĐ";
+    }
+
+</script>
+</body>
+</html>
