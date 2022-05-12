@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Phương trình bậc 2</title>
+</head>
+<body>
+<h1> Phương trình bậc 2 </h1>
+<h2> ax<sup>2</sup> + bx +c = 0</h2>
+<input type="number" id="hesoa" placeholder="Nhập giá trị a">
+<input type="number" id="hesob" placeholder="Nhập giá trị b">
+<input type="number" id="hesoc" placeholder="Nhập giá trị c">
+<button onclick="add()">Kết quả</button>
+<p>Kết quả</p>
+<p>Giá trị x:
+<div id="giatri"></div>
+</p>
+<script>
+    function add() {
+        let a = parseFloat(document.getElementById("hesoa").value);
+        let b = parseFloat(document.getElementById("hesob").value);
+        let c = parseFloat(document.getElementById("hesoc").value);
+        let dt = Math.pow(b,2) - 4*a*c ;
+        if (a != 0) {
+            if( dt<0){
+                document.getElementById("giatri").innerText = "Phương trình vô nghiệm";
+            }else if (dt = 0) {
+                document.getElementById("giatri").innerHTML = "x"+"<sub>1</sub>" + "="+"x"+"<sub>2</sub>"+"=" -b/(2*a);
+            }else{
+                document.getElementById("giatri").innerHTML ="x"+"<sub>1</sub>" +"=" + (-b+Math.sqrt(dt))/(2*a) + "và" +"x"+"<sub>2</sub>" + "="+(-b-Math.sqrt(dt))/(2*a) ;
+            }
+        } else {
+            document.getElementById("giatri").innerText = "Phương trình bậc 1";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="playgame()">Bắt đầu</button>
+<script>
+    function playgame(){
+        let a = parseInt(prompt("Nhập vào 1 số bất kỳ"))
+        let resultNumber =Math.floor( Math.random()*(number -1)) +1
+        console.log(resultNumber)
+        let guestNumber
+        let count = 1
+        do{
+            guestNumber = +prompt("Mời đoán số")
+            if (guestNumber>resultNumber && count<3){
+                alert("ĐOán nhỏ đi!!")
+                count++
+            }
+            if (guestNumber < resultNumber && count<3) {
+                alert("Đoán tăng lên!!")
+                count++
+            }else if (guestNumber === resultNumber){
+                alert("you win")
+                break
+            }else {
+                alert("you fail")
+                break
+            }
+        }while (true)
+    }
+</script>
+</body>
+</html>

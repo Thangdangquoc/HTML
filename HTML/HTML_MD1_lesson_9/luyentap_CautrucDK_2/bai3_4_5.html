@@ -9,6 +9,18 @@
 <input type="number" id="width">
 <button onclick="add()">Tính</button>
 <p>Kết quả</p>
-<p id="ke"></p>
+<p>Diện tích hình vuông: <div id="vuong"></div></p>
+<p>Diện tích hình chữ nhật: <div id="chunhat"></div></p>
+<p>Diện tích tam giác vuông: <div id="tamgiac"></div></p>
+<script>
+    function add() {
+        let a = parseFloat(document.getElementById("hight").value);
+        let b = parseFloat(document.getElementById("width").value);
+        let c = a * b
+        document.getElementById("vuong").innerHTML = c + "m"+ "<sup>2</sup>";
+        document.getElementById("chunhat").innerHTML = c +"m"+ "<sup>2</sup>";
+        document.getElementById("tamgiac").innerHTML = c / 2+ "m"+ "<sup>2</sup>";
+    }
+</script>
 </body>
 </html>

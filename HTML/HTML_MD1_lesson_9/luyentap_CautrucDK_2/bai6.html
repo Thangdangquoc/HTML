@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính phương trình bậc 1</title>
+</head>
+<body>
+<h1>Tính phương trình bậc 1</h1>
+<h2> ax + b = c</h2>
+
+<input type="number" id="hesoa" placeholder="Nhập giá trị a">
+<input type="number" id="hesob" placeholder="Nhập giá trị b">
+<input type="number" id="hesoc" placeholder="Nhập giá trị c">
+<button onclick="add()">Kết quả</button>
+<p>Kết quả</p>
+<p>Giá trị x: <div id="giatri"></div> </p>
+<script>
+    function add() {
+        let a = parseFloat(document.getElementById("hesoa").value);
+        let b = parseFloat(document.getElementById("hesob").value);
+        let c = parseFloat(document.getElementById("hesoc").value);
+        let x = (c-b)/a
+        if (a!=0){
+            document.getElementById("giatri").innerText = x;
+        }else {
+            document.getElementById("giatri").innerText = "Phương trình vô nghiệm";
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điều kiện 3 cạnh của một tam giác</title>
+</head>
+<body>
+<h1>Kiểm tra 3 số nhập vào có phải cạnh một tam giác hay không? Là tam giác gì?</h1>
+<input type="number" id="numa" placeholder="Nhập số a">
+<input type="number" id="numb" placeholder="Nhập số b">
+<input type="number" id="numc" placeholder="Nhập số c">
+<button onclick="check()">Kiểm tra</button>
+<p> Kết quả: <div id="tamgiac"></div></p>
+<script>
+    function check() {
+        let a = parseFloat(document.getElementById("numa").value);
+        let b = parseFloat(document.getElementById("numb").value);
+        let c = parseFloat(document.getElementById("numc").value);
+        if (a + b > c && a + c > b && b + c > a) {
+            if (a * a == b * b + c * c || b * b == a * a + c * c || c * c == b * b + a * a) {
+                document.getElementById("tamgiac").innerText = " tam giác vuông";
+            } else if (a == b && a == c) {
+                document.getElementById("tamgiac").innerText = " tam giác đều";
+            } else if (a == b || a == c || b == c) {
+                document.getElementById("tamgiac").innerText = " tam giác cân";
+            } else {
+                document.getElementById("tamgiac").innerText = " tam giác";
+            }
+        } else {
+            document.getElementById("tamgiac").innerText = " không là tam giác nhọn";
+        }
+    }
+</script>
+</body>
+</html>
