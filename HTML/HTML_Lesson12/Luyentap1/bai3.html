@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>numbers = [10,20,30,40,50] </p>
+<p>Giá trị lớn nhất: <div id="Max"></div></p>
+<p>Giá trị trung bình: <div id="advenger"></div></p>
+<script>
+    let numbers = [10,20,30,40,50]
+    let max = numbers[0];
+    let index = 0;
+    let totals = 0
+    for (let i = 0; i< numbers.length; i++){ totals = totals + numbers[i]
+        if (numbers[i]> max){
+            max = numbers[i];
+            index= i
+        }
+    }
+    document.getElementById("Max").innerText = max + " Vị trí thứ: "+ index;
+    document.getElementById("advenger").innerText = totals/(numbers.length)
+
+</script>
+
+</body>
+</html>
