@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính tổng các số nguyên tố</title>
+</head>
+<body>
+<!--<button onclick="totals()">Sum</button>-->
+<!--<p id="bai3a"></p>-->
+<script>
+    let array = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 17];
+    let total = 0
+    let count = 0
+    for (let i = 0; i < array.length; i++) {
+            for (let j = 1; j <= array[i]; j++) {
+                if (array[i] % j === 0) {
+                    count += 1
+                }
+            }
+            if (count === 2) {
+                total += array[i]
+        }
+        count = 0
+    }
+    alert(total)
+
+</script>
+</body>
+
+</html>
