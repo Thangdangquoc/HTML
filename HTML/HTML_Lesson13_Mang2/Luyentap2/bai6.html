@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thay thế</title>
+</head>
+<body>
+<input type="text" id="count1">
+<button onclick="add()">Click</button>
+<p>Số từ là: <div id="dem"></div></p>
+<script>
+    function add(){
+        let arr = document.getElementById("count1").value
+        let array = arr.replace("-","_")
+        document.getElementById("dem").innerHTML = array
+    }
+</script>
+</body>
+</html>

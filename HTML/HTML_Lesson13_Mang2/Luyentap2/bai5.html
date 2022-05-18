@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="count1">
+<input type="text" id="count2">
+<button onclick="add()">Click</button>
+<p>có giống không?
+<div id="dem"></div>
+</p>
+<script>
+    function add() {
+        let array = document.getElementById("count1").value
+        let arr = array.split(" ")
+        let array1 = document.getElementById("count2").value
+        let arr1 = array1.split(" ")
+        let acc = 0;
+        if (arr.length == arr1.length) {
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == arr1[i]) {
+                    acc += 1
+                }
+            }
+            if (acc == arr.length) {
+                document.getElementById("dem").innerHTML = "Hai mảng giống"
+            } else {
+                document.getElementById("dem").innerHTML = "Hai mảng k giống"
+            }
+        } else {
+            document.getElementById("dem").innerHTML = "Hai mảng k giống"
+        }
+    }
+</script>
+</body>
+</html>

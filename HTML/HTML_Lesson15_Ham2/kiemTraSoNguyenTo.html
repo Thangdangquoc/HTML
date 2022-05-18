@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nhập vào có phải số nguyên tố hay không?</title>
+</head>
+<body>
+<!--<h1>Kiểm tra số nhập vào có phải số nguyên tố hay không?</h1>-->
+<script>
+    let num = +prompt("Nhập số nguyên a")
+    isPrime(num);
+    function isPrime(number){
+        let count =0;
+        for (let i =1; i<= number; i++){
+            if (number%i ==0 ){
+                count+=1
+            }
+        }if (count == 2){
+            alert(number + " Là số nguyên tố!")
+        }else {
+            alert(number + " Không phải số nguyên tố!")
+        }
+    }
+
+</script>
+</body>
+</html>

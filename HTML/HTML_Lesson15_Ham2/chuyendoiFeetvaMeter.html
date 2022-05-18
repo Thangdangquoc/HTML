@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi feer và meter</title>
+</head>
+<body>
+<p>foot =<div id="demo1"></div></p>
+<p>meter =<div id="demo2"></div></p>
+<script>
+    let feet = parseFloat(prompt("Nhập feet: "))
+    let Meter = parseFloat(prompt("Nhập meter: "))
+    footToMeter(feet);
+    meterToFoot(Meter)
+    function footToMeter(foot){
+        let meter = foot*0.305
+        document.getElementById("demo1").innerHTML = meter + "meter"
+    }
+    function meterToFoot(meter){
+        let foot = meter*3.279
+        document.getElementById("demo2").innerHTML = foot +"foot"
+    }
+</script>
+</body>
+</html>
