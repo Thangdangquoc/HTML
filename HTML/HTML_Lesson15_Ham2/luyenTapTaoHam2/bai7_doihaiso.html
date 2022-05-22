@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="check()">Click bài7</button>
+<p>Đổi chỗ hai số vừa nhập:<div id="check"></div></p>
+</body>
+<script>
+    function check(){
+        let num1 = +prompt("Nhập vào số a")
+        let num2 = +prompt("Nhập vào số b")
+        let arr = nhapvao(num1,num2)
+        num1 = arr[0];
+        num2 = arr[1];
+        document.getElementById("check").innerHTML = num1 + ";" + num2 ;
+    }
+    function nhapvao(a,b) {
+        let temp = a;
+        a = b;
+        b = temp
+        return[a,b]
+    }
+</script>
+</html>

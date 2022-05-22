@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính bình phương </title>
+</head>
+<body>
+<button onclick="add()">Click bài1</button>
+<p>Bình phương của số đó là: <div id="bt"></div></p>
+<script>
+    function add(){
+        let num = +prompt("Nhập vào một số tính bình phương")
+        let square = num**2;
+        document.getElementById("bt").innerHTML = num + "<sup>2</sup>" + "=" + square;
+    }
+</script>
+</body>
+</html>

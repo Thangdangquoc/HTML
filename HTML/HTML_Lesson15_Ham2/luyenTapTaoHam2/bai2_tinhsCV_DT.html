@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chu vi và diện tích hình tròn</title>
+</head>
+<body>
+<h2>Tính chu vi và diện tích hình ctrofn khi biết bán kính</h2>
+<button onclick="add()">Click bài2</button>
+<p>Chu vi của số đó là: <div id="chuVi"></div></p>
+<p>Diện tích của số đó là: <div id="dienTich"></div></p>
+<script>
+    function add(){
+        let r = +prompt("Nhập bán kính của hình tròn")
+        let s = Math.pow(r,2)*Math.PI;
+        let p= 2*r*Math.PI;
+        document.getElementById("dienTich").innerHTML = s;
+        document.getElementById("chuVi").innerHTML = p;
+    }
+</script>
+</body>
+</html>

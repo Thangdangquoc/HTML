@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính giai thừa của một số</title>
+</head>
+<body>
+<button onclick="luythua()">Click bài3</button>
+<p>Giai thừa của số đó là:
+<div id="bt"></div>
+</p>
+<script>
+    function luythua() {
+        let num = +prompt("Nhập số nguyên dương tính lũy thừa")
+        document.getElementById("bt").innerHTML = num + "!" + " = " +func1(num)
+    }
+    function func1(a) {
+        if (a == 2) {
+            return 2;
+        }
+        return a * func1(a - 1);
+    }
+</script>
+</body>
+</html>

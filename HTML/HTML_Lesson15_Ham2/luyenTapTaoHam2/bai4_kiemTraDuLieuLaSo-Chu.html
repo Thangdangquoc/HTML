@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nhập vào là ký tự số hay chữ</title>
+</head>
+<body>
+<button onclick="kiemTra()">Click bài4</button>
+<p>Kiểm tra dữ liệu nhập vào là số:
+<div id="Kt"></div>
+<script>
+    function kiemTra(){
+        // let numchar = ;
+        document.getElementById("Kt").innerHTML = last(prompt("Nhập số hoặc ký tự"));
+    }
+    function last(a){
+        if (!isNaN(a)){
+            return true;
+        }
+        return false;
+    }
+</script>
+</body>
+</html>

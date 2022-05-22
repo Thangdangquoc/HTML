@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra số nhập vào là số nguyên dương hay không</title>
+</head>
+<body>
+<button onclick="check()">Click bài6</button>
+<p>Số nhập vào là số nguyên dương là:<div id="check"></div></p>
+<script>
+    function check() {
+        document.getElementById("check").innerHTML = kiemtra(+prompt("Nhập số nguyên nào đó!"));
+    }
+    function kiemtra(number){
+if (number>0)   {
+    return true;
+}     else if (number<0){
+    return false;
+}else {
+    return "Không phải số nguyên âm or số nguyên dương";
+}
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="Giatrinhonhat()">Click bài5</button>
+<p>Min của dãy số nhập vào đó là: <div id="bt"></div></p>
+<script>
+  function Giatrinhonhat() {
+    let n = +prompt("Nhập vào bao nhiêu số của mảng: ")
+    let array = new Array(n)
+    for (let i = 0; i < array.length; i++) {
+      array[i] = prompt("Nhập vào số thứ " + (i + 1))
+    }
+    let min = array[0]
+    for (let i = 1; i < array.length; i++){
+        if (array[i]< min){
+            min = array[i];
+        }
+    } document.getElementById("bt").innerHTML = min;
+  }
+</script>
+</body>
+</html>
