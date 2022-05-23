@@ -2,9 +2,104 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Thiết kế điên thoại</title>
 </head>
 <body>
-
+<table>
+    <tr>
+        <td id="Nokianame">Nokia</td>
+        <td id="chargingStatus">ON/OFF CHARGING</td>
+        <td id="batteryStatus"></td>
+        <td>
+            <button id="powerStatus">ON/OFF</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button id="btnPhone1Send" onclick="sendMessage(nokia,iphone)">Send</button>
+        </td>
+        <td>
+            <button>Write</button>
+        </td>
+        <td>
+            <button>Delete</button>
+        </td>
+        <td>
+            <button>#</button>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td colspan="2">
+                    <textarea id="myTextArea1">
+                    </textarea>
+        </td>
+    </tr>
+    <tr id="messageBox1">
+        <td>
+            <select name="" id="listInboxMess">
+            </select></td>
+        <td>
+            <select name="" id="listOutboxMess">
+            </select></td>
+    </tr>
+    <tr>
+        <td>
+            <button>Check Inbox</button>
+        </td>
+        <td>
+            <button>Check SentBox</button>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td>Iphone</td>
+        <td>ONCHARGING</td>
+        <td>BATT/99%</td>
+        <td>
+            <button>ON/OFF</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button id="btnPhone2Send" onclick="sendMessage(iphone,nokia)">Send</button>
+        </td>
+        <td>
+            <button>Write</button>
+        </td>
+        <td>
+            <button>Delete</button>
+        </td>
+        <td>
+            <button>#</button>
+        </td>
+    </tr>
+</table>
+<table>
+    <tr>
+        <td colspan="2">
+                    <textarea id="myTextArea2">
+                    </textarea>
+        </td>
+    </tr>
+    <tr id="messageBox2">
+        <td>
+            <select name="" id="listInboxMess2">
+            </select></td>
+        <td>
+            <select name="" id="listOutboxMess2">
+            </select></td>
+    </tr>
+    <tr>
+        <td>
+            <button>Check Inbox</button>
+        </td>
+        <td>
+            <button>Check SentBox</button>
+        </td>
+    </tr>
+</table>
 </body>
 </html>
