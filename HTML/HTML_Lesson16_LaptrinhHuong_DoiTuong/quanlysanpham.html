@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <p> Add product</p>
+    <input type="text" id="add">
+    <button onclick="addproduct()"> Add</button>
+    <p> Display all product</p>
+</div>
+<table id="displayarea" border="1">
+</table>
+<div id="edit"></div>
+<script>
+    // let lisproduct = ["ip12", "note8", "s8", "apple watch"];
+    // displayAll();
+    // function displayAll() {
+    //     let str = ' <tr>\n' +
+    //         ' <td>Product Name</td>' +
+    //         ' <td></td>\n' +
+    //         '<td>' + lisproduct.length + ' products</td>\n' +
+    //         '</tr>';
+    //     for (let i = 0; i < lisproduct.length; i++) {
+    //         str += '<tr><td>' + lisproduct[i] + '</td>' +
+    //             '<td><button onclick="showformEdit(' + i + ')">Edit</button></td>' +
+    //             '<td><button onclick="deleteProduct(' + i + ')">Delete</button></td></tr>'
+    //     }
+    //     document.getElementById("displayarea").innerHTML = str;
+    // }
+    // let lisproduct =[];
+    // let s = "<table>";
+    // for (let i = 0; i < lisproduct.length; i++) {
+    //     s += "<td>" + "<img alt='lỗi' src=" + lisproduct[i] + " /> "+"<h2>" + lisproduct[i] + "</h2>"+"<p>Giá: " + lisproduct[i]+ " VND</p>"
+    //     s = s + (i + 1) + ". " + lisproduct[i] + "<button onclick=\"edit(" + i + ")\"> Edit</button>\n" +
+    //         "<button onclick=\"xoa(" + i + ")\">Delete</button>\n" + "<button onclick=\"displayGiohang(" + i + ")\">+Cart</button>\n" + "<br>";
+    // }
+    //
+    // console.log(s)
+    // document.getElementById("ds").innerHTML = s
+    let lisproduct = [];
+    displayAll();
+    function displayAll() {
+        let str = ' <tr>\n' +
+            ' <td>Product Name</td>' +
+            ' <td></td>\n' +
+            // "<img  alt='Lỗi' src=" + lisproduct[i].image + ">"+
+            '<td>' + lisproduct.length + ' products</td>\n' +
+            '</tr>';
+        for (let i = 0; i < lisproduct.length; i++) {
+            str += '<tr><td>' + lisproduct[i] + '</td>' +
+                '<td><button onclick="showformEdit(' + i + ')">Edit</button></td>' +
+                '<td><button onclick="deleteProduct(' + i + ')">Delete</button></td>'+
+                '<td><button onclick="AddProduct(' + i + ')">Add</button></td></tr>'
+        }
+        document.getElementById("displayarea").innerHTML = str;
+    }
+    function addproduct() {
+        let productName = document.getElementById("add").value;
+        document.getElementById("add").value = '';
+        lisproduct.push(productName);
+        console.log(lisproduct);
+        displayAll()
+    }
+    function deleteProduct(index) {
+        lisproduct.splice(index, 1);
+        displayAll();
+    }
+    function showformEdit(inDex){
+        let str ='';
+        str = '<input type="text" id="editProduct" value="'+ lisproduct[inDex] +'"><button onclick="saveProduct('+ inDex +')">Save</button>';
+        document.getElementById("edit").innerHTML = str;
+    }
+    function saveProduct(inDex){
+        lisproduct[inDex] =document.getElementById("editProduct").value;
+        document.getElementById("edit").innerHTML = '';
+        displayAll()
+    }
+</script>
+</body>
+</html>

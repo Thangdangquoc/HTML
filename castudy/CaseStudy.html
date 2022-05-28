@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SIÊU THỊ LINH KIỆN</title>
+    <link rel="stylesheet" href="css/display.css">
+</head>
+<body>
+<div class="boxcenter">
+<!--    <div class="headle">-->
+        <div class="row mb header">
+            <h1> SIÊU THỊ LINH KIỆN</h1>
+<!--                    <div class="search">-->
+<!--&lt;!&ndash;                        <img src="http://bizweb.dktcdn.net/100/140/943/themes/184613/assets/logo.png?1644209168297">&ndash;&gt;-->
+<!--                        <input type="" name="" placeholder="Tìm kiếm sản phẩm">-->
+<!--                        <button>Tìm Kiếm</button>-->
+<!--                    </div>-->
+        </div>
+<!--        <div class="search">-->
+<!--            <img src="http://bizweb.dktcdn.net/100/140/943/themes/184613/assets/logo.png?1644209168297">-->
+<!--&lt;!&ndash;            <input type="" name="" placeholder="Tìm kiếm sản phẩm">&ndash;&gt;-->
+<!--&lt;!&ndash;            <button>Tìm Kiếm</button>&ndash;&gt;-->
+<!--        </div>-->
+<!--    </div>-->
+    <div class="menu">
+        <ul class="list">
+            <li><a onclick="trangchu()" href="">Trang chủ</a></li>
+            <li><a onclick="module1()" href="">Module - Kit</a>
+                <ul class="sub-menu">
+                    <li><a href="" type="button" id="hobit" onclick="ggg()"><label for="hobit">Kit Phát
+                        Triển</label></a></li>
+                    <li><a href="">Module Sạc Dự Phòng</a></li>
+                    <li><a href="">Module Nguồn</a></li>
+                    <li><a href="">Module Cảm Biến</a></li>
+                </ul>
+            </li>
+            <li><a onclick="linhkien()" href="">Linh kiện bán dẫn</a>
+                <ul class="bandan">
+                    <li><a href="">Transistor</a></li>
+                    <li><a href="">Diode Cầu</a></li>
+                    <li><a href="">Led Đơn(cắm/dán)</a></li>
+                </ul>
+            </li>
+            <li><a onclick="sanpham()" href="">Sản Phẩm mới</a>
+                <ul class="sanpham">
+                    <li><a href="">PCB tự ráp</a></li>
+                    <li><a href="">Led Trái Tim</a></li>
+                    <li><a href="">Dồng Hồ Matrix</a></li>
+                </ul>
+
+            </li>
+            <li>
+                <button class="gop" onclick="gopy()" href="">Góp ý</button>
+            </li>
+            <li>
+                <button class="gop" onclick="hoidap1()" href="">Hỏi đáp</button>
+            </li>
+        </ul>
+    </div>
+    <div id="display">
+        <img src="anhcase/combo-trai-tim-32-led-full.webp" alt="Lỗi" width="302px" height="150px">
+        <img src="anhcase/machsdp3cong50k.webp" alt="Lỗi" width="302px" height="150px">
+        <img src="anhcase/3861102-copy110k.webp" alt="Lỗi" width="302px" height="150px">
+        <img src="anhcase/Arduino-Leonardo-32U4-1024x768-300kk.jpg" alt="Lỗi" width="302px" height="150px">
+    </div>
+    <div>
+        <div class="fom">
+            <form method="post"
+                  action="http://localhost:63342/untitled/castudy/camOnBanMuaHang.html?_ijt=ohf82o26i2u5jopfmraq77t6rf&_ij_reload=RELOAD_ON_SAVE">
+                <h2> Order Form</h2>
+                <p><b>First and last name:<span style="color: red">*</span></b></p>
+                <input class="nhanHang" type="text" name="name">
+                <p><b> Email:<span style="color: red">*</span></b></p>
+                <input class="nhanHang" type="email" name="email" size="20">
+                <p><b> Numberphone:<span style="color: red">*</span></b></p><br>
+                <input class="nhanHang" type="phone" name="phone" size="10">
+                <p><b> Address :<span style="color: red">*</span></b></p>
+                <input class="nhanHang" type="text" name="phone" size="20">
+                <p><b> Phương thức thanh toán<span style="color: red">*</span></b></p>
+                <input type="radio" id="gen1" name="gender" value="Male"><label for="gen1">Nhận hàng rồi thanh
+                toán</label><br>
+                <input type="radio" id="gen2" name="gender" value="Female"><label for="gen2">Thanh toán
+                trước</label><br>
+                <button onclick="register()">Đăng ký nhận Hàng</button><br>
+            </form>
+        </div>
+        <div class="shower">
+            <p> Add product</p>
+            <input type="text" id="add" placeholder="Tên sản phẩm">
+            <input type="number" id="add1" style="width: 200px" placeholder="Giá tiền sản phẩm VNĐ">
+            <input type="number" id="add2" style="width: 100px" placeholder="Số lượng">
+            <button onclick="addproduct()"> Thêm sản phẩm</button>
+            <p> Display all product</p>
+        </div>
+        <table id="displayarea">
+        </table>
+        <div id="edit">
+        </div>
+        <div>
+            <h1>Giỏ hàng của bạn</h1>
+            <div id="ds1"></div>
+        </div>
+    </div>
+    <div>
+        <section class="slider">
+            <div class="aspect-ratio-169">
+                <img src="anhcase/combo-trai-tim-32-led-full.webp">
+                <img src="anhcase/Arduino-Leonardo-32U4-1024x768-300kk.jpg">
+                <img src="anhcase/machsdp3cong50k.webp">
+                <img src="anhcase/3861102-copy110k.webp">
+                <img src="anhcase/unnamed200k.jpg">
+                <img src="anhcase/MAX7219-8-Digit-7-Seg-Red-Display-Module-Top50k.jpg">
+            </div>
+        </section>
+    </div>
+    <div id="footer">
+        <p><b>Linh kiện Việt Nam</b></p>
+        <p>Điện thoại: 0913.188.305 &emsp; Fax: 0376.327.797</p>
+        <p>Địa chỉ: Số 10 Mỹ Đình, Nam Từ Liêm, Hà Nội</p>
+    </div>
+</div>
+</body>
+<script src="JScastudy/hoidap.js"></script>
+<script src="JScastudy/gopy.js"></script>
+<script src="JScastudy/index.js"></script>
+<script src="JScastudy/gioHang.js"></script>
+<script>
+    const imgPosition = document.querySelectorAll(".aspect-ratio-169 img")
+    const imgContainer = document.querySelector('.aspect-ratio-169')
+    let imgNuber =imgPosition.length
+    let index = 0
+    imgPosition.forEach(function (image, index) {
+        image.style.left = index *50 + "%"
+    })
+    function imgSlide(){
+        index++;
+        console.log(index)
+        if(index>=imgNuber-3){index = 0}
+        imgContainer.style.left = '-'+ index*100+"%"
+    }
+    setInterval(imgSlide,2000)
+</script>
+</html>

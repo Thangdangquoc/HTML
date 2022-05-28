@@ -1,0 +1,15 @@
+.fom{
+    border: 1px solid grey;
+    border-radius: 10px;
+    width: 300px;
+    height: 500px;
+    text-align: center;
+    margin: auto;
+    float: right;
+}
+.fom input{
+    float: left;
+}
+.fom p{
+    float: left;
+}

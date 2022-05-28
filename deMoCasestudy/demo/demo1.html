@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="demo.css">
+  <script src="introduc.js"></script>
+</head>
+<body onload="checkAdmin()">
+<div id="container">
+  <div id="heater">
+    <div id="logo"><img src="../image/honda-logo.jpg" alt="Lỗi" width="302px" height="150px"></div>
+    <div id="header"></div>
+  </div>
+  <div id="menu">
+
+    <ul>
+      <li>
+        <button onclick="introduceHonda()">GIỚI THIỆU</button>
+      </li>
+      <li>
+        <button onclick="showCar()">Ô TÔ</button>
+      </li>
+      <li>
+        <button>XE MÁY</button>
+        <ul class="motor">
+          <li>
+            <button onclick="showScooter()">XE GA</button>
+          </li>
+          <li>
+            <button onclick="showMotorbike()">XE SỐ</button>
+          </li>
+          <li>
+            <button onclick="showMotor()">XE MOTOR</button>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <button>TIN TỨC</button>
+      </li>
+      <li>
+        <button>PHẢN HỒI</button>
+      </li>
+      <li>
+        <button onclick="renderEdit('Tạo mới')">TẠO MỚI</button>
+      </li>
+    </ul>
+  </div>
+  <div id="display">
+    <div id="poster"><img src="../image/poster1.jpg" alt="Lỗi" width="100%" height="100%"></div>
+    <div id="displayElement"><img src="../image/main.jpg" alt="Lỗi" width="100%" height="100%"></div>
+  </div>
+  <div id="footer">
+    <p></p>
+    <p>Copyright &copy; by Honda Viet Nam</p>
+    <p>Điện thoại: 0368868686 &emsp; Fax: 0356658458</p>
+    <p>Địa chỉ: Phường Phúc Thắng - Thành phố Phúc Yên - Tỉnh Vĩnh Phúc</p>
+  </div>
+
+</div>
+</body>
+
+<script src="../js/model/product.js"></script>
+<script src="../js/index/introduce.js"></script>
+<script src="../js/index/display.js"></script>
+
+<script src="edit.js"></script>
+<script src="demo11.js"></script>
+<script src="delete.js"></script>
+
+</html>

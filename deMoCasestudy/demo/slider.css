@@ -1,0 +1,53 @@
+/**{*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*    box-sizing: border-box;*/
+/*}*/
+/*.slider-item{*/
+/*    width: 100vw;*/
+/*    height: 100vh;*/
+/*}*/
+/*.slider-item-one{*/
+/*    background-image: url("../anhcase/combo-trai-tim-32-led-full.webp");*/
+/*    background-position: center;*/
+/*    background-repeat: no-repeat;*/
+/*    background-size:20% ;*/
+/*}*/
+/*.slider-item-two{*/
+/*    background-image: url("../anhcase/Arduino-Leonardo-32U4-1024x768-300kk.jpg");*/
+/*    background-position: center;*/
+/*    background-repeat: no-repeat;*/
+/*    background-size:20% ;*/
+/*}*/
+/*.slider-item-three{*/
+/*    background-image: url("../anhcase/machsdp3cong50k.webp");*/
+/*    background-position: center;*/
+/*    background-repeat: no-repeat;*/
+/*    background-size:20% ;*/
+/*}*/
+/*.slider-item-four{*/
+/*    background-image: url("../anhcase/3861102-copy110k.webp");*/
+/*    background-position: center;*/
+/*    background-repeat: no-repeat;*/
+/*    background-size:20% ;*/
+/*}*/
+/*.slider-item-five{*/
+/*    background-image: url("../anhcase/unnamed200k.jpg");*/
+/*    background-position: center;*/
+/*    background-repeat: no-repeat;*/
+/*    background-size:20% ;*/
+/*}*/
+.aspect-ratio-169 {
+    display: block;
+    position: relative;
+    padding-top: 56.25%;
+}
+
+.aspect-ratio-169 img {
+    display: block;
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    top: 0;
+    left: 0;
+}

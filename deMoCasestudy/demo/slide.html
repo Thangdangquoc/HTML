@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="slider.css">
+</head>
+<body>
+<section class="slider">
+    <div class="aspect-ratio-169">
+        <img src="../anhcase/combo-trai-tim-32-led-full.webp">
+        <img src="../anhcase/Arduino-Leonardo-32U4-1024x768-300kk.jpg">
+        <img src="../anhcase/machsdp3cong50k.webp">
+        <img src="../anhcase/3861102-copy110k.webp">
+        <img src="../anhcase/unnamed200k.jpg">
+        <img src="../anhcase/unnamed200k.jpg">
+    </div>
+
+</section>
+</body>
+<script>
+    const imgPosition = document.querySelectorAll(".aspect-ratio-169 img")
+    const imgContainer = document.querySelector('.aspect-ratio-169')
+    let imgNuber =imgPosition.length
+    let index = 0
+    imgPosition.forEach(function (image, index) {
+        image.style.left = index *100 + "%"
+    })
+    function imgSlide(){
+        index++;
+        console.log(index)
+        if(index>=imgNuber){index = 0}
+        imgContainer.style.left = '-'+ index*100+"%"
+    }
+    // setInterval(imgSlide,2000)
+</script>
+</html>

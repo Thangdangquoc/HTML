@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="demoo222.css">
+</head>
+<body>
+<div class="55">
+    <div class="fom">
+        <form method="post" action="http://demo.codegym.vn/6/registration_form/register.php">
+            <h2> Order Form</h2>
+            <p><b>First and last name:<span style="color: red">*</span></b></p>
+            <input type="text" name="name">
+            <p><b> Email:<span style="color: red">*</span></b></p>
+            <input type="email" name="email" size="20">
+            <p><b> Numberphone:<span style="color: red">*</span></b></p>
+            <input type="phone" name="phone" size="10">
+            <p><b> Address :<span style="color: red">*</span></b></p>
+            <input type="phone" name="phone" size="50">
+            <p><b> Phương thức thanh toán<span style="color: red">*</span></b></p>
+            <input type="radio" id="gen1" name="gender" value="Male"><label for="gen1">Nhận hàng rồi thanh toán</label>
+            <input type="radio" id="gen2" name="gender" value="Female"><label for="gen2">Thanh toán trước</label>
+            <button onclick="register()">Đăng ký nhận Hàng</button>
+        </form>
+    </div>
+    <div class="container mt-3">
+        <h2>Add New Product</h2>
+        <input type="text" id="them" placeholder="Tên sản phẩm">
+        <input type="number" id="them1" style="width: 200px" placeholder="Giá tiền sản phẩm VNĐ">
+        <input type="number" id="them2" style="width: 100px" placeholder="Số lượng">
+        <button type="button" onclick="add()" id="add" class="btn btn-outline-info">Thêm</button>
+    </div>
+</div>
+
+<h2>Display All Product</h2>
+<div id="ds"></div>
+<div>
+    <h1>Giỏ hàng của bạn</h1>
+    <div id="ds1"></div>
+</div>
+<button onclick="thanhtoan()">Thanh Toán</button>
+
+</body>
+<script src="demoo22.js"></script>
+<script src="giohangdemoo22.js"></script>
+
+</html>
